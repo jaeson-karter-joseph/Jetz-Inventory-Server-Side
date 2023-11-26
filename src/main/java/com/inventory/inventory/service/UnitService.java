@@ -31,16 +31,4 @@ public class UnitService {
             return null;
         }
     }
-
-    public UnitDto convertToDto(Unit unit) {
-        UnitDto unitDto = modelMapper.map(unit, UnitDto.class);
-        logger.info("Unit converted to DTO successfully: {}", unitDto);
-        return unitDto;
-    }
-
-    public Unit convertToEntity(UnitDto unitDto) {
-        Unit unit = modelMapper.map(unitDto, Unit.class);
-        logger.info("Unit converted to entity successfully: {}", unit);
-        return unit;
-    }
 }
